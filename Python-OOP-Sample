@@ -1,0 +1,18 @@
+class MyTriangle:
+  def __init__(self, side1=0, side2=0, side3=0):
+    self.side1=side1
+    self.side2=side2
+    self.side3=side3
+  def setSide1( self, side1 ):
+    self.side1=side1
+  def setSide2( self, side2 ):
+    self.side2 = side2
+  def setSide3( self, side3 ):
+    self.side3 = side3
+  def getArea(self):
+    s=(self.side1+self.side2+self.side3)/2
+    area = (s*(s-self.side1)*(s-self.side2)*(s-self.side3)) ** 0.5
+    return area
+t1 = MyTriangle(5,6,7)
+# Use methods to set base and height 
+t1.getArea()
