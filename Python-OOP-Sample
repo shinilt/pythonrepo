@@ -13,6 +13,7 @@ class MyTriangle:
     s=(self.side1+self.side2+self.side3)/2
     area = (s*(s-self.side1)*(s-self.side2)*(s-self.side3)) ** 0.5
     return area
+# instantiate the triangle
 t1 = MyTriangle(5,6,7)
-# Use methods to set base and height 
+# get the area 
 t1.getArea()
