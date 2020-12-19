@@ -1,0 +1,22 @@
+1. run the command in the new project created in pycharm
+django-admin startproject DjangoDemoProject
+2. this will create a django proj folder within the pycharm proj.
+3. Cd to the django project directory by cd command.
+4. run the local django server by using command . thi will show the default UI of django.
+python manage.py runserver
+5. Create new django app within the django project [multiple projects possible in 1 django project]
+python manage.py startapp DemoApp
+6. Edit views.py within the app folder to create views pecific to the app. Add a new function and return the required HttpResposne.
+7. Create urls.py within the app folder. This will serve as the page links specific to the app.
+Now link the required url patterns to corresponding functions in the views.py of the app. For the homepage, link '' to the function necessary to return homepage.
+8. Link the urls.py in the app folder from urls.py in the project folder. For the empty url pattern the bwlow can be used. Update the required url parth and appname.urls [location of the urls.py file in the app specfic folder]
+path('', include('DemoApp.urls'))
+
+9. now run the project again - python manage.py runserver
+
+Adding templates for the Apps.
+10. Create 'templates' folder structure within the app folder. create an html file/files as u need.
+
+11. Register the apps to the project.
+in the settings.py in the project folder add ur apps under the tag - INSTALLED_APPS = [xxxx, yyyyy]
+xxxx willbe 'DemoApp.apps.DemoappConfig'  -- App name . apps(this is the py file name ) . Class name in the py file.
